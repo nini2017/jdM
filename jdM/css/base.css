@@ -1,0 +1,72 @@
+/* reset样式 */
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    /* 移动端：设置宽度的计算从边框开始 */
+    box-sizing: border-box;
+    /* 移动端：设置点击高亮效果 清除 */
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    font-size: 14px;
+    font-family: "Microsoft YaHei", sans-serif;
+}
+a {
+    color: #333;
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+input[type="text"],
+input[type="password"],
+input[type="search"],
+textarea {
+    border: none;
+    outline: none;
+    vertical-align: middle;
+    /* 针对文本域不能拖拽改大小 */
+    resize: none;
+    /* 移动端：清除控件的默认样式 */
+    -webkit-appearance: none;
+}
+
+/* common css */
+.f_left {
+    float: left;
+}
+.f_right {
+    float: right;
+}
+.clearfix::before,
+.clearfix::after {
+    content: "";
+    display: block;
+    visibility: hidden;
+    height: 0;
+    line-height: 0;
+    clear: both;
+}
+.ml10 {
+    margin-left: 10px;
+}
+.mr10 {
+    margin-right: 10px;
+}
+.mt10{
+    margin-top: 10px;
+}
+.mb10 {
+    margin-bottom: 10px;
+}
+/* 使用精灵图时公用样式 */
+[class^="icon_"],
+[class*=" icon_"] {
+    background-image: url('../images/sprites.png');
+    background-repeat: no-repeat;
+    background-size: 200px 200px;
+}
